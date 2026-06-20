@@ -184,6 +184,8 @@ PhD-level training manual. Follow [guideline-template.md](guideline-template.md)
 
 Choose LaTeX notation from the technology's domain (e.g. algebras for databases, latency models for queues, type rules for languages) — do not assume graphs, vectors, or RAG unless the user asked for them.
 
+**Math delimiters:** Use `$...$` (inline) and `$$...$$` (display) in all markdown — compatible with Obsidian and GitHub. Do not use `\(...\)` or `\[...\]`. See [guideline-template.md](guideline-template.md) § Math notation.
+
 ---
 
 ## Phase 7: Verification
@@ -206,6 +208,7 @@ Choose LaTeX notation from the technology's domain (e.g. algebras for databases,
 | User wants PhD level (default) | Formal notation, references, failure-mode discussion |
 | Capstone needs paid API | Provide a no-credential lesson immediately before using mocks/fakes |
 | User names only the technology, no goal | Research and propose a sensible capstone; confirm if ambiguous |
+| Writing LaTeX in markdown | `$...$` inline, `$$...$$` display — never `\(...\)` / `\[...\]` |
 
 ---
 
@@ -217,6 +220,7 @@ Choose LaTeX notation from the technology's domain (e.g. algebras for databases,
 - Do not put full theory in README — use GUIDELINE.md.
 - Do not create 20 lessons when 10 focused ones suffice.
 - Do not hardcode secrets; use `.env.example` only.
+- Do not use `\(...\)` or `\[...\]` for math — use `$...$` and `$$...$$` for Obsidian/GitHub.
 
 ---
 

@@ -88,9 +88,9 @@ Lessons are sequential.
 
 {Formal definitions for this lesson. Use LaTeX when it adds precision:}
 
-\[
+$$
 \text{operation}(x) = \ldots
-\]
+$$
 
 Explain how the example instantiates the theory.
 
@@ -165,11 +165,27 @@ Pick notation that matches the domain — do not copy formulas from unrelated st
 
 | Domain | Example notation |
 |--------|------------------|
-| State / transition | \( \delta : S \times \Sigma \to S \) |
-| Query / algebra | \( \sigma_\phi(R),\; \pi_A(R),\; R \bowtie S \) |
+| State / transition | $ \delta : S \times \Sigma \to S $ |
+| Query / algebra | $ \sigma_\phi(R),\; \pi_A(R),\; R \bowtie S $ |
 | Distributed / queues | ordering, delivery guarantees, latency bounds |
-| Types | \( \Gamma \vdash e : \tau \) |
+| Types | $ \Gamma \vdash e : \tau $ |
 | ML / retrieval (only if capstone needs it) | similarity metrics, conditional generation |
-| Idempotent updates | \( f(f(s, \delta), \delta) = f(s, \delta) \) |
+| Idempotent updates | $ f(f(s, \delta), \delta) = f(s, \delta) $ |
 
 Research the technology first; derive notation from its official model, not from a template project.
+
+## Math notation (Obsidian + GitHub)
+
+Use **dollar delimiters only** — do not use `\(...\)` or `\[...\]`:
+
+| Kind | Delimiter | Example |
+|------|-----------|---------|
+| Inline | `$...$` | The join $R \bowtie S$ |
+| Display | `$$...$$` on its own line | See block below |
+
+$$
+\sigma_\phi(R) = \{ t \in R \mid \phi(t) \}
+$$
+
+- Put display blocks on their own lines; blank lines before/after help GitHub.
+- Escape literal `$` in prose (e.g. `\$100`) or wrap in backticks (`` `$VAR` ``).
