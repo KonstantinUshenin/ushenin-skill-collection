@@ -15,7 +15,7 @@ tinkering
 
 ## Recommendation
 
-I recommend running `learn-tech SOME_TECH`. Then analyze each example one by one. I highly recommend mutating, breaking, and fixing the code for better understanding. Also, use your IDE's debug mode to inspect variables. After you have a deep understanding of an example, run `learn-tech-exam NAME_OF_LESSON` to check your understanding of how the technology behaves.
+I recommend running `learn-tech SOME_TECH`. Then analyze each example one by one following `GUIDELINE.md` and content of `examples/` folder. I highly recommend mutating, breaking, and fixing the code for better understanding. Also, use your IDE's debug mode to inspect variables. After you have a deep understanding of an example, run `learn-tech-exam NAME_OF_LESSON` to check your understanding of how the technology behaves.
 
 One lesson with its exam usually takes 1–1.5 hours of real time. I do not recommend going faster.
 
