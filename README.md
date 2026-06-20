@@ -1,25 +1,40 @@
 # ushenin-skill-collection
 
-A personal collection of skills for learning and 
-tinkering
+A personal collection of skills for learning and tinkering
+
+**Fast Install:** Write in you harness `Install all skills from the repo: https://github.com/KonstantinUshenin/ushenin-skill-collection`
 
 ## Skills
 
-### [learn-tech](learn-tech/)
+**[/learn-tech](learn-tech/)** -- is a skill to learn some software technology via set of gradually complicated examples. Use it like `/learn-tech redis`, `/learn-tech kafka`, etc. This skill usually create 10-12 examples and all necessary infrastructure.
 
-`learn-tech` -- is a skill to learn some software technology via set of gradually complicated examples. Use it like `learn-tech redis`, `learn-tech kafka`. This skill usually create 10-12 examples and all necessary infrastructure.
+**[/learn-tech-exam](learn-tech-exam/)** -- oral examination on a technology topic. One question at a time, with feedback and gap analysis. Works best on a `/learn-tech` repo with `GUIDELINE.md`, `examples/` and other files.
 
-### [learn-tech-exam](learn-tech-exam/)
+## Study Guide
 
-`learn-tech-exam` -- oral examination on a technology topic. One question at a time, with feedback and gap analysis. Works best on a `learn-{tech}` repo (`GUIDELINE.md`, `examples/`).
+* Run `/learn-tech SOME_TECH` to create self-study guide for the technology
+* Analyze each example one by one following `GUIDELINE.md` and content of `examples/` folder. 
+* Use `/explain` or other command from your harness to better understand examples.
+* Mutate, breake and fix the code for better understanding. Use your IDE's debug mode to inspect variables. 
+* Run `/learn-tech-exam examples/{NN}_{LESSON}.py` to exam yourself and close gaps.
+* One lesson with its exam usually takes 1–1.5 hours of real time. I do not recommend going faster.
+* It is suitable to read `GUIDELINE.md` in GitHub web UI, Obsidian or other software for Markdown rendering.
 
-## Recommendation
+```mermaid
+flowchart TD
+    A["Invoke \'learn-tech {SOME_TECH}\'"] --> B["Read GUIDELINE.md"]
+    B --> C["Read & Run \'examples/{NN}_{LESSON}.py\'"]
+    C --> D["Call \'/explain examples/{NN}_{LESSON}.py\'"]
+    D --> E["Invoke \'/learn-tech-exam examples/{NN}_{LESSON}.py\'"]
+    E --> B
+    E --> F["END"]
+```
 
-I recommend running `learn-tech SOME_TECH`. Then analyze each example one by one following `GUIDELINE.md` and content of `examples/` folder. I highly recommend mutating, breaking, and fixing the code for better understanding. Also, use your IDE's debug mode to inspect variables. After you have a deep understanding of an example, run `learn-tech-exam NAME_OF_LESSON` to check your understanding of how the technology behaves.
+## Install
 
-One lesson with its exam usually takes 1–1.5 hours of real time. I do not recommend going faster.
+**Option 1:** Write in you harness `Install all skills from the repo: https://github.com/KonstantinUshenin/ushenin-skill-collection`
 
-**Install:** clone this repo, then symlink each skill into the skills directory for your agent:
+**Option 2:** Clone this repo, then symlink each skill into the skills directory for your agent:
 
 | Agent | Command |
 |-------|---------|
@@ -34,9 +49,10 @@ One lesson with its exam usually takes 1–1.5 hours of real time. I do not reco
 | **pi** | `ln -s "$(pwd)/learn-tech" ~/.pi/agent/skills/learn-tech` |
 | | `ln -s "$(pwd)/learn-tech-exam" ~/.pi/agent/skills/learn-tech-exam` |
 
-Alternatives: `openclaw skills install ./learn-tech --global` · `hermes skills install ./learn-tech`
-
+**Option 3:**  `openclaw skills install ./learn-tech --global` · `hermes skills install ./learn-tech`
 
 ## Note
 
-This skills were originally designed for Cursor and Composer 2 model.
+This skills were originally designed for Cursor and Auto model selection.
+
+**Version:** v0.0.2 — see [CHANGELOG.md](CHANGELOG.md)
